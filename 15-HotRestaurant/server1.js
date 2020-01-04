@@ -25,7 +25,7 @@ app.get("/tables", function(req, res) {
 });
 
 // Create New Characters - takes in JSON input
-app.post("/api/characters", function(req, res) {
+app.post("/api/reservations", function(req, res) {
    // req.body hosts is equal to the JSON post sent from the user
    // This works because of our body parsing middleware
    let newReservation = req.body;
@@ -42,11 +42,17 @@ app.listen(PORT, function() {
    console.log("App listening on PORT " + PORT);
 });
 
-
 app.post("/api/reservations", function(req, res) {
    var newReservation = req.body;
 
-   newReservation.routeName = newReservation.name.place()
+   newReservation.routeName = newReservation.name.place();
 
    console.log(newReservation);
-})
+
+
+   reservations.push(newReservations);
+
+   res.json(newReservations);
+});
+
+
