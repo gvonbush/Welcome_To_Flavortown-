@@ -100,4 +100,30 @@
          </footer>
       </div>
    </body>
+
+   <script>
+      // Question: What does this code do?
+      $(".submit").on("click", function(event) {
+         event.preventDefault();
+         let newReservation = {
+            name: $("#reserve-name")
+               .val()
+               .trim(),
+            phone: $("#reserve-phone")
+               .val()
+               .trim(),
+            email: $("#reserve-email")
+               .val()
+               .trim(),
+            id: $("#reserve-unique-id")
+               .val()
+               .trim()
+         };
+
+         // Question: What does this code do??
+         $.post("/api/reservations", newReservation).then(function(data) {
+            console.log("add.html", data);
+         });
+      });
+   </script>
 </html>
