@@ -4,11 +4,7 @@
    "description": "",
    "main": "server6.js",
    "dependencies": {
-<<<<<<< HEAD
       "express": "^4.17.1"
-=======
-      "express": "^4.16.3"
->>>>>>> 9a181516108d2d46c29813a11a14289a570600f6
    },
    "devDependencies": {},
    "scripts": {

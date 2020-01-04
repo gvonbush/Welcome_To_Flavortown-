@@ -1,52 +1,10 @@
-<<<<<<< HEAD
-let express = require("express");
-=======
 const express = require("express");
 const path = require("path");
->>>>>>> 9a181516108d2d46c29813a11a14289a570600f6
 
 
 let app = express();
 let PORT = 3000;
 
-<<<<<<< HEAD
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-app.listen(PORT, function() {
-   console.log("App listening on PORT " + PORT);
-});
-let Reservations = [
-   {
-     routeName: "",
-     name: "",
-   },
-   {
-     routeName: "",
-     name: "",
-   },
-   {
-     routeName: "",
-     name: "",
-     
-   }
- ];
-app.post("/api/Reservations", function(req, res) {
-   // req.body hosts is equal to the JSON post sent from the user
-   // This works because of our body parsing middleware
-   var newReservations = req.body;
- 
-   // Using a RegEx Pattern to remove spaces from newCharacter
-   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-   newReservations.routeName = newReservation.name.place(/\s+/g, "").toLowerCase();
- 
-   console.log(newReservations);
- 
-   characters.push(newReservations);
- 
-   res.json(newReservations);
- });
-=======
 let reservations = [];
 let waitList = [];
 
@@ -92,4 +50,3 @@ app.post("/api/reservations", function(req, res) {
 
    console.log(newReservation);
 })
->>>>>>> 9a181516108d2d46c29813a11a14289a570600f6
