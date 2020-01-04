@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 
+
 let app = express();
 let PORT = 3000;
 
@@ -47,12 +48,11 @@ app.post("/api/reservations", function(req, res) {
    newReservation.routeName = newReservation.name.place();
 
    console.log(newReservation);
-<<<<<<< Updated upstream
+
 
    reservations.push(newReservations);
 
    res.json(newReservations);
 });
-=======
-});
->>>>>>> Stashed changes
+
+
