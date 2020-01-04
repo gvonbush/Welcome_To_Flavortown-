@@ -48,4 +48,8 @@ app.post("/api/reservations", function(req, res) {
    newReservation.routeName = newReservation.name.place()
 
    console.log(newReservation);
-})
+
+   reservations.push(newReservations);
+
+   res.json(newReservations);
+});
